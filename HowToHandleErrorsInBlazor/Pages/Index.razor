@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<h3><b>Count:</b> @count</h3>
+<button class="btn btn-primary" @onclick=@IncreaseCount>Add</button>
+
+@code {
+    private int count;
+
+    private void IncreaseCount()
+    {
+        count++;
+        if (count >= 5)
+            throw new Exception("The value is too high!");
+    }
+}
